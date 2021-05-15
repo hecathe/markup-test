@@ -1,0 +1,39 @@
+header.header
+    .header__container
+        .header__left
+            .header__wrap
+                a.header__logo(href="#")
+                    svg(width="24" height="24")
+                        use(xlink:href="assets/images/sprite.svg#logo")
+                form.header__form(action="#")
+                    label.header__label
+                        svg.header__search-icon(width="18" height="18")
+                            use(xlink:href="assets/images/sprite.svg#search-icon")
+                        input.header__input(type="search" placeholder="Поиск")
+            .header__nav
+                ul.header__list
+                    li.header__item
+                        a.header__link.active(href="#") Деньги
+                    li.header__item
+                        a.header__link(href="#") Контакты
+                    li.header__item
+                        a.header__link(href="#") Услуги
+                            svg.header__icon-arrow(width="7" height="4")
+                                use(xlink:href="assets/images/sprite.svg#arrow-down")
+        button.header__add-btn
+            svg(width="42" height="42")
+                use(xlink:href="assets/images/sprite.svg#add-btn")
+
+        .header__right
+            button.header__noti-btn
+                svg(width="15" height="19")
+                    use(xlink:href="assets/images/sprite.svg#ring-ball")
+                span.header__noti-num 2
+
+            .header__select-wrap
+                svg.header__icon(width="17" height="17")
+                    use(xlink:href="assets/images/sprite.svg#house")
+                select.header__select(name="")
+                    option(value="ООО «РОДНЫЕ ПРОСТОРЫ»") ООО «РОДНЫЕ ПРОСТОРЫ»
+                svg.header__arrow(width="17" height="17")
+                    use(xlink:href="assets/images/sprite.svg#arrow-down") 

@@ -1,0 +1,120 @@
+:root {
+	--content-p-r: 0;
+}
+
+// Размеры
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+
+// Шрифт
+$font-primary: sans-serif;
+
+//colors
+$color-darkblue: #2B2B2B;
+$color-darkblue3: #2C2F32;
+$color-darkblue2: #454E59;
+$color-lightblue: #37AEC1;
+$color-blue: #357CBE;
+$color-grey: #828A96;
+$color-grey2: #808080;
+$color-red: #E54D4D;
+$color-red2: #CF4545;
+$color-green: #81C624;
+$color-green2: #8DC540;
+$color-white: #ffffff;
+$color-lightgrey: #f2f2f2;
+
+@import "./common/fonts.scss";
+@import "./common/normalize";
+
+* {
+	box-sizing: border-box;
+	outline-offset: 4px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select,
+button {
+	appearance: none;
+	font-family: $font-primary;
+}
+
+// https://github.com/WICG/focus-visible
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+main {
+	flex: 1;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container {
+	max-width: 1240;
+	width: 100%;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+@import "./common/header.scss";
+@import "./pages/index.scss";
+@import "./common/footer.scss";
+
+// @media screen and (max-width: 1274px) {
+
+// }
+
+// @media screen and (max-width: 960px) {
+
+// }
+
+// @media screen and (max-width: 768px) {
+
+// }

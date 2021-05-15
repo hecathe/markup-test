@@ -1,0 +1,85 @@
+extends ../template
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main
+        section.content
+            .content__container
+                .content__left
+                .content__right.content-right
+                    .content-right__head
+                        button.content-right__btn
+                            svg(width="20" height="20")
+                                use(xlink:href="assets/images/sprite.svg#cross")
+                        p.content-right__text Платежное поручение № 5241234 от 23.09.2015
+
+                    .content-right__wrap
+                        .content-right__container
+                            .content-right__top
+                                span.content-right__sum – 23 500,00 ₽
+                                .content-right__from со счета: 
+                                    span.content-right__acc Расчетный счет (***012345)
+                                .content-right__status.content-right__status--success  
+                                    span.content-right__status-text Исполнен
+                                    |, 21 июня 15:33
+
+                            .content-right__info.company-card
+                                .company-card__top
+                                    .company-card__left
+                                        h2.company-card__title ООО "Родные просторы"
+                                        ul.company-card__list
+                                            li.company-card__item ИНН: 22341497819132
+                                            li.company-card__item Банк: ОАО Сбербанк
+                                            li.company-card__item БИК: 2352362365
+                                            li.company-card__item Счет: 40802810970010000395
+                                    .company-card__right
+                                        ul.company-card__right-list.rating-list
+                                            li.rating-list__item
+                                                .rating-list__caption Высокая финансовая устойчивость
+                                                .rating-list__circle.rating-list__circle--88
+                                                    .rating-list__inner-circle
+                                                        span.rating-list__num 88
+                                            li.rating-list__item
+                                                .rating-list__caption Высокая финансовая устойчивость
+                                                .rating-list__circle.rating-list__circle--100
+                                                    .rating-list__inner-circle
+                                                        span.rating-list__num 100
+                                            li.rating-list__item
+                                                .rating-list__caption Высокая финансовая устойчивость
+                                                .rating-list__circle.rating-list__circle--full
+                                                    .rating-list__inner-circle
+                                                        span.rating-list__num 1
+                                                        span.rating-list__num Класс
+
+                                .company-card__bot
+                                    p.company-card__text Оплата за партию ромашек и одуванчиков по договору 14023&nbsp;-&nbsp;023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+
+                            .content-right__text
+                                span Комиссия банка: 70 р.
+                                p Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным. Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
+
+
+                    .content-right__footer
+                        ul.content-right__list.button-list
+                            li.button-list__item
+                                button.button-list__btn
+                                    svg.button-list__icon(width="20" height="20")
+                                        use(xlink:href="assets/images/sprite.svg#repeat")
+                                    span.button-list__text Повторить
+                            li.button-list__item
+                                button.button-list__btn
+                                    svg.button-list__icon(width="22" height="20")
+                                        use(xlink:href="assets/images/sprite.svg#star")
+                                    span.button-list__text В избранное
+                            li.button-list__item
+                                button.button-list__btn
+                                    svg.button-list__icon(width="22" height="20")
+                                        use(xlink:href="assets/images/sprite.svg#message")
+                                    span.button-list__text Спросить
+                            li.button-list__item
+                                button.button-list__btn
+                                    svg.button-list__icon(width="20" height="4")
+                                        use(xlink:href="assets/images/sprite.svg#icon_more")
+                                    span.button-list__text Действия
