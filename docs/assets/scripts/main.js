@@ -1,6 +1,3 @@
-let text = "Привет Васян";
-console.log(text);
-
 const activeClass = "active";
 
 // Переключение табов
