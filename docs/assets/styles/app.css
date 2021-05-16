@@ -416,7 +416,9 @@ main {
     background: #ffffff;
     padding-left: 20px;
     padding-right: 32px;
-    margin-right: 56px; }
+    margin-right: 56px;
+    -webkit-clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%); }
   .header__logo {
     margin-right: 27px; }
   .header__label {
@@ -508,6 +510,13 @@ main {
     .header__select.active .header__arrow {
       transform: rotate(180deg); }
 
+@media screen and (max-width: 1100px) {
+  .header__wrap {
+    margin-right: 30px; }
+  .header__list {
+    -moz-column-gap: 20px;
+         column-gap: 20px; } }
+
 .content__container {
   display: grid;
   grid-template-columns: 1fr 900px; }
@@ -532,7 +541,15 @@ main {
     padding: 0;
     margin-right: 20px; }
   .content-right__wrap {
-    overflow-y: scroll; }
+    height: calc(100vh - 58px - 60px - 58px);
+    overflow-y: scroll;
+    padding-bottom: 10px; }
+    .content-right__wrap::-webkit-scrollbar {
+      width: 6px;
+      background: none; }
+    .content-right__wrap::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.09);
+      border-radius: 100px; }
   .content-right__container {
     max-width: 545px;
     margin: 0 auto; }
@@ -578,14 +595,28 @@ main {
     padding: 19px 0; }
 
 .company-card {
+  filter: drop-shadow(0px 3px 10px rgba(85, 37, 37, 0.1)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
   margin: 15px auto 20px; }
   .company-card__top {
+    position: relative;
     display: flex;
     justify-content: space-between;
     background: #ffffff;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0869282), 0px 0px 1px rgba(0, 0, 0, 0.390682);
     padding: 20px 30px;
-    padding-right: 50px; }
+    padding-right: 50px;
+    -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 13%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 95% 0%, 100% 13%, 100% 100%, 0% 100%);
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .company-card__top::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 26px;
+      top: 0;
+      right: -2px;
+      background-image: url("../images/sprite.svg#coner");
+      background-repeat: no-repeat; }
   .company-card__title {
     font-weight: 400;
     font-size: 20px;
@@ -608,7 +639,7 @@ main {
     line-height: 125%;
     color: #2B2B2B;
     background: #f2f2f2;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.0651891), 0px 4px 15px rgba(0, 0, 0, 0.0869282), 0px 0px 1px rgba(0, 0, 0, 0.239102);
+    border-radius: 0 0 5px 5px;
     padding: 20px 30px; }
 
 .button-list {
@@ -641,12 +672,52 @@ main {
   grid-template-columns: 1fr;
   row-gap: 15px; }
   .rating-list__item {
-    display: flex; }
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    align-items: center; }
   .rating-list__caption {
-    max-width: 89px;
+    max-width: 100px;
     font-size: 10px;
     line-height: 120%;
     color: #357CBE;
     text-align: center;
-    -webkit-text-decoration: dotted;
-            text-decoration: dotted; }
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted; }
+  .rating-list__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(-35deg, #81c624 82%, #eee 82%);
+    border-radius: 50%; }
+  .rating-list__circle--100 {
+    background: linear-gradient(-35deg, #81c624 100%, #eee 82%); }
+  .rating-list__circle--full {
+    background: linear-gradient(-35deg, #81c624 100%, #eee 82%);
+    color: #ffffff; }
+    .rating-list__circle--full .rating-list__inner-circle {
+      background-color: #81C624; }
+  .rating-list__inner-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ffffff; }
+  .rating-list__text {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 120%; }
+
+@media screen and (max-width: 1100px) {
+  .content__container {
+    grid-template-columns: 1fr 600px; }
+  .content-right__wrap {
+    height: calc(100vh - 86px - 60px - 58px); } }
